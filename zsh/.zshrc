@@ -48,16 +48,12 @@ plugins=(git !mercurial)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/chris/Scripts:/usr/local/opt/dart/libexec/bin:/Users/chris/Android\ SDK/tools:/Users/chris/Android\ SDK/platform-tools
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/dart/libexec/bin:/Users/chris/Android\ SDK/tools:/Users/chris/Android\ SDK/platform-tools
 
 export PATH=$PATH:/Users/chris/.pub-cache/bin
 
 # Dart SDK
 export DART_SDK=/usr/local/opt/dart/libexec
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/chris/Cocos2dx/cocos2d-x-3.2/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add brew's bin directory to PATH
 export PATH=$PATH:/usr/local/sbin
