@@ -1,0 +1,13 @@
+[user]
+	name = Christopher Horner
+	email = horner.cd@gmail.com
+[color]
+	ui = true
+	branch = true
+	diff = true
+	interactive = true
+	status = true
+[push]
+	default = simple
+[core]
+	autocrlf = input
