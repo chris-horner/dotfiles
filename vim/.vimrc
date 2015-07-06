@@ -24,11 +24,13 @@ set number
 set relativenumber
 highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
-""colorscheme wattslandia
+""colorscheme base16-monokai
 
 "" GUI
 if has("gui_running")
-  colorscheme wattslandia
   set guifont=Roboto\ Mono:h12
+  colorscheme monokai-gui
+else
+  colorscheme monokai-term
 endif
 
