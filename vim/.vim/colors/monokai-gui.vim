@@ -35,6 +35,7 @@ hi SignColumn   guifg=#75715E guibg=#3E3D32 gui=none
 hi IncSearch    guifg=bg guibg=#E6DB74 gui=none
 ""hi LineNr       guifg=#75715E guibg=#3E3D32 gui=none
 highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight CursorLineNr guifg=#FD971F
 hi MatchParen   guifg=fg guibg=bg gui=bold
 hi ModeMsg      gui=none
 hi MoreMsg      guifg=#66D9EF gui=none

@@ -4,6 +4,7 @@ set showmode
 "" Syntax highlighting
 filetype plugin indent on
 syntax on
+filetype on
 
 "" Two space tabs
 set expandtab
