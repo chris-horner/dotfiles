@@ -64,3 +64,6 @@ export PATH=$PATH:/usr/local/sbin
 #export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 export ANDROID_HOME=/Users/chris/Android\ SDK/
+
+source ~/.zshprivate
+
