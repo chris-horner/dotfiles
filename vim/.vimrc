@@ -25,8 +25,6 @@ set number
 set relativenumber
 highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
-""colorscheme base16-monokai
-
 "" GUI
 if has("gui_running")
   set guifont=Roboto\ Mono:h12
