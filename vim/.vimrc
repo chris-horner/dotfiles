@@ -1,5 +1,13 @@
-"" Context helps
-set showmode
+"" vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'bling/vim-airline'
+Plug 'kylef/apiblueprint.vim'
+
+call plug#end()
 
 "" Syntax highlighting
 filetype plugin indent on
@@ -32,4 +40,24 @@ if has("gui_running")
 else
   colorscheme monokai-term
 endif
+set guioptions-=L
+set guioptions-=r
+
+"" F2 opens NERDTree
+map <F2> :NERDTreeToggle<CR>
+
+"" If only NERDTree is open and vim receives a close command, it should exit
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"" vim-airline should appear no matter how many files are open.
+set laststatus=2
+
+"" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
