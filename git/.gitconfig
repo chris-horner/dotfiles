@@ -11,3 +11,11 @@
 	default = simple
 [core]
 	autocrlf = input
+  editor = vim
+[merge]
+  tool = vimdiff
+[mergetool]
+  keeptemoraries = false
+  keepbackups = false
+  prompt = false
+  trustexitcode = false
