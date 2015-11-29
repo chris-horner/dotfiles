@@ -67,3 +67,6 @@ export ANDROID_HOME=/Users/chris/Android\ SDK/
 
 source ~/.zshprivate
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+

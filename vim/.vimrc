@@ -61,3 +61,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"" apiblueprint only wants to work with 4 spaces :(
+autocmd Filetype apiblueprint setlocal ts=4 sts=4 sw=4
+
