@@ -19,3 +19,4 @@ White=196,197,181
 BoldWhite=246,246,239
 Font=Roboto Mono
 FontHeight=12
+CursorType=block

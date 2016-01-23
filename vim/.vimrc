@@ -64,3 +64,7 @@ let g:syntastic_check_on_wq = 0
 "" apiblueprint only wants to work with 4 spaces :(
 autocmd Filetype apiblueprint setlocal ts=4 sts=4 sw=4
 
+"silent execute '!mkdir "'.$VIMRUNTIME.'/temp"'
+"silent execute '!del "'.$VIMRUNTIME.'/temp/*~"'
+set backupdir=$VIMRUNTIME/temp//
+set directory=$VIMRUNTIME/temp//
