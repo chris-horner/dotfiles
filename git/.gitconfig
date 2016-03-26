@@ -12,6 +12,7 @@
 [core]
 	autocrlf = input
   editor = vim
+	trustctime = false
 [merge]
   tool = vimdiff
 [mergetool]
