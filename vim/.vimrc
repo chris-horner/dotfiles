@@ -35,19 +35,29 @@ highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGre
 
 "" GUI
 if has("gui_running")
-  set guifont=Roboto\ Mono:h12
+  if has('win32') || has('win64')
+    set guifont=Droid\ Sans\ Mono:h10
+  else
+    set guifont=Roboto\ Mono:h12
+  endif
   colorscheme monokai-gui
+  "" Stop annoying sounds when pressing escape too many times.
+  autocmd GUIEnter * set vb t_vb=
 else
   colorscheme monokai-term
 endif
 set guioptions-=L
 set guioptions-=r
+set guioptions-=T
 
 "" F2 opens NERDTree
 map <F2> :NERDTreeToggle<CR>
 
 "" If only NERDTree is open and vim receives a close command, it should exit
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"" Set the working directory to be that of the current file.
+autocmd BufEnter * lcd %:p:h
 
 "" vim-airline should appear no matter how many files are open.
 set laststatus=2
