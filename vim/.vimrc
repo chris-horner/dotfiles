@@ -38,7 +38,7 @@ if has("gui_running")
   if has('win32') || has('win64')
     set guifont=Droid\ Sans\ Mono:h10
   else
-    set guifont=Roboto\ Mono:h12
+    set guifont=Consolas:h11
   endif
   colorscheme monokai-gui
   "" Stop annoying sounds when pressing escape too many times.
