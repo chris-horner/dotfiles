@@ -36,9 +36,9 @@ highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGre
 "" GUI
 if has("gui_running")
   if has('win32') || has('win64')
-    set guifont=Droid\ Sans\ Mono:h10
-  else
     set guifont=Consolas:h11
+  else
+    set guifont=Roboto\ Mono:h12
   endif
   colorscheme monokai-gui
   "" Stop annoying sounds when pressing escape too many times.
