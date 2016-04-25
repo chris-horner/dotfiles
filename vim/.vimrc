@@ -6,6 +6,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'bling/vim-airline'
 Plug 'kylef/apiblueprint.vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
