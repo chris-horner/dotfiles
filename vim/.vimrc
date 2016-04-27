@@ -10,6 +10,7 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'udalov/kotlin-vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -64,9 +65,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "" Set the working directory to be that of the current file.
 autocmd BufEnter * lcd %:p:h
 
-"" vim-airline should appear no matter how many files are open.
+"" vim-airline
 set laststatus=2
 set noshowmode
+set statusline+=%{fugitive#statusline()}
+let g:airline_theme = 'bubblegum'
 
 "" syntastic
 set statusline+=%#warningmsg#
@@ -85,31 +88,14 @@ set backupdir=$HOME/.vimswap//
 set directory=$HOME/.vimswap//
 
 "" Quickly swap between buffers with ctrl h/l
-function! SwitchToNextBuffer(incr)
-  let help_buffer = (&filetype == 'help')
-  let current = bufnr("%")
-  let last = bufnr("$")
-  let new = current + a:incr
-  while 1
-    if new != 0 && bufexists(new) && ((getbufvar(new, "&filetype") == 'help') == help_buffer)
-      execute ":buffer ".new
-      break
-    else
-      let new = new + a:incr
-      if new < 1
-        let new = last
-      elseif new > last
-        let new = 1
-      endif
-      if new == current
-        break
-      endif
-    endif
-  endwhile
-endfunction
-nnoremap <silent> <C-l> :call SwitchToNextBuffer(1)<CR>
-nnoremap <silent> <C-h> :call SwitchToNextBuffer(-1)<CR>
+nnoremap <silent> <C-l> :bnext<CR>
+nnoremap <silent> <C-h> :bprevious<CR>
 
 "" ctrl-e to swap back and forth between previous buffers
 nnoremap <C-e> <C-^>
 
+"" Save a buffer before hiding it.
+set autowrite
+
+"" Make gitgutter update faster.
+set updatetime=250
