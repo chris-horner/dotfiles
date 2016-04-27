@@ -5,8 +5,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kylef/apiblueprint.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'kien/ctrlp.vim'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
@@ -40,6 +43,7 @@ if has("gui_running")
     set guifont=Consolas:h11
   else
     set guifont=Roboto\ Mono:h12
+    set linespace=1
   endif
   colorscheme monokai-gui
   "" Stop annoying sounds when pressing escape too many times.
@@ -62,6 +66,7 @@ autocmd BufEnter * lcd %:p:h
 
 "" vim-airline should appear no matter how many files are open.
 set laststatus=2
+set noshowmode
 
 "" syntastic
 set statusline+=%#warningmsg#
