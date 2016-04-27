@@ -42,6 +42,7 @@ highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGre
 if has("gui_running")
   if has('win32') || has('win64')
     set guifont=Consolas:h11
+    set linespace=0
   else
     set guifont=Roboto\ Mono:h12
     set linespace=1
