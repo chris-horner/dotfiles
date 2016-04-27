@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-fugitive'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
@@ -72,6 +73,9 @@ set noshowmode
 set statusline+=%{fugitive#statusline()}
 let g:airline_theme = 'bubblegum'
 
+"" Make ctrlp ignore files listen in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 "" syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -100,3 +104,46 @@ set autowrite
 
 "" Make gitgutter update faster.
 set updatetime=250
+
+"" Error message formats.
+"" Microsoft MSBuild
+set errorformat+=\\\ %#%f(%l\\\,%c):\ %m
+"" Microsoft compiler: cl.exe
+set errorformat+=\\\ %#%f(%l)\ :\ %#%t%[A-z]%#\ %m
+"" Microsoft HLSL compiler: fxc.exe
+set errorformat+=\\\ %#%f(%l\\\,%c-%*[0-9]):\ %#%t%[A-z]%#\ %m
+
+"" ctrl-Enter to execute build.bat on windows.
+function! ExecBuildScript(filename)
+  let buildFile = a:filename
+  let buildPath = expand("%:p:h") . "/"
+  let depth = 0
+  while depth < 10
+    if filereadable(buildPath . buildFile)
+      let &makeprg = "\"" . buildPath . buildFile . "\""
+      make
+      cwindow
+      echo "Executed " . buildFile
+      return 0
+    endif
+    let depth += 1
+    let buildPath = buildPath . "../"
+  endwhile
+  echo "Missing " . buildFile
+endfunction
+if has('win32') || has('win64')
+  nnoremap <silent> <C-Return> :call ExecBuildScript('build.bat')<CR>
+endif
+
+" Automatically quit the last window if it's a quickfix
+" window.
+" http://bit.ly/1Fn9JHG
+function! CloseQuickfix()
+  if &buftype=="quickfix"
+    if winnr('$') < 2
+      quit!
+    endif
+  endif
+endfunction
+au BufEnter * call CloseQuickfix()
+
