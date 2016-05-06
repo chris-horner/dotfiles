@@ -11,7 +11,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
@@ -104,6 +103,9 @@ set autowrite
 
 "" Make gitgutter update faster.
 set updatetime=250
+
+"" Highlight current line
+set cursorline
 
 "" Error message formats.
 "" Microsoft MSBuild
