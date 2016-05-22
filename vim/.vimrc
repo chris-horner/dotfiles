@@ -11,6 +11,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-fugitive'
+Plug 'Chiel92/vim-autoformat'
+Plug 'ajh17/vimcompletesme'
 
 call plug#end()
 
@@ -137,9 +139,9 @@ if has('win32') || has('win64')
   nnoremap <silent> <C-Return> :call ExecBuildScript('build.bat')<CR>
 endif
 
-" Automatically quit the last window if it's a quickfix
-" window.
-" http://bit.ly/1Fn9JHG
+"" Automatically quit the last window if it's a quickfix
+"" window.
+"" http://bit.ly/1Fn9JHG
 function! CloseQuickfix()
   if &buftype=="quickfix"
     if winnr('$') < 2
@@ -148,4 +150,8 @@ function! CloseQuickfix()
   endif
 endfunction
 au BufEnter * call CloseQuickfix()
+
+"" Autocomplete.
+noremap <silent> <C-K> :Autoformat<CR>
+au BufWrite * :Autoformat
 
