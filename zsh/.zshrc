@@ -74,6 +74,7 @@ source $ZSH/oh-my-zsh.sh
 alias muse="unison -ignore \"Name .DS_STORE\" ~/Music ssh:koryo/media/server/Music/Chris"
 alias gw="./gradlew"
 alias gitBranches="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias ffs="sudo !!"
 
 # Android home variable handy for various tools
 export ANDROID_HOME=~/.android-sdk
