@@ -86,7 +86,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:~/Scripts
 
 # Add Android tools to PATH
-export PATH=$PATH:~/.android-sdk/tools/bin
+export PATH=$PATH:~/.android-sdk/tools:~/.android-sdk/platform-tools:~/.android-sdk/tools/bin
 
 # Add jenv and java tools if they're available.
 if hash jenv 2>/dev/null; then
