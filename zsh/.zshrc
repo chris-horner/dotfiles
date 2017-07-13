@@ -86,4 +86,16 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:~/Scripts
 
 # Add Android tools to PATH
-export PATH=$PATH:~/.android-sdk/tools:~/.android-sdk/platform-tools
+export PATH=$PATH:~/.android-sdk/tools/bin
+
+export PATH=$PATH:~/.jenv/bin
+eval "$(jenv init -)"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export JDK_16="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"
+export JDK_17="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
+export JDK_18="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home"
+
+
+# added by travis gem
+[ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh

@@ -8,8 +8,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'Chiel92/vim-autoformat'
 Plug 'ajh17/vimcompletesme'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -46,21 +46,17 @@ if has("gui_running")
     set guifont=Roboto\ Mono:h12
     set linespace=1
   endif
-  colorscheme monokai-gui
+  ""colorscheme monokai-gui
+  colorscheme nord
   "" Stop annoying sounds when pressing escape too many times.
   autocmd GUIEnter * set vb t_vb=
 else
-  colorscheme monokai-term
+""  colorscheme monokai-term
+  colorscheme nord
 endif
 set guioptions-=L
 set guioptions-=r
 set guioptions-=T
-
-"" F2 opens NERDTree
-map <F2> :NERDTreeToggle<CR>
-
-"" If only NERDTree is open and vim receives a close command, it should exit
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "" Set the working directory to be that of the current file.
 autocmd BufEnter * lcd %:p:h
@@ -69,9 +65,9 @@ autocmd BufEnter * lcd %:p:h
 set laststatus=2
 set noshowmode
 set statusline+=%{fugitive#statusline()}
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'nord'
 
-"" Make ctrlp ignore files listen in .gitignore
+"" Make ctrlp ignore files listed in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 "" syntastic
@@ -147,8 +143,4 @@ function! CloseQuickfix()
   endif
 endfunction
 au BufEnter * call CloseQuickfix()
-
-"" Autocomplete.
-noremap <silent> <C-K> :Autoformat<CR>
-au BufWrite * :Autoformat
 

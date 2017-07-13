@@ -1,0 +1,2 @@
+# Plugins shouldn't be checked in.
+vim/.vim/plugged
