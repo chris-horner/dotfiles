@@ -9,7 +9,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ajh17/vimcompletesme'
-Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -46,13 +45,11 @@ if has("gui_running")
     set guifont=Roboto\ Mono:h12
     set linespace=1
   endif
-  ""colorscheme monokai-gui
-  colorscheme nord
+  colorscheme monokai-gui
   "" Stop annoying sounds when pressing escape too many times.
   autocmd GUIEnter * set vb t_vb=
 else
-""  colorscheme monokai-term
-  colorscheme nord
+  colorscheme monokai-term
 endif
 set guioptions-=L
 set guioptions-=r
@@ -65,7 +62,7 @@ autocmd BufEnter * lcd %:p:h
 set laststatus=2
 set noshowmode
 set statusline+=%{fugitive#statusline()}
-let g:airline_theme = 'nord'
+let g:airline_theme = 'bubblegum'
 
 "" Make ctrlp ignore files listed in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
