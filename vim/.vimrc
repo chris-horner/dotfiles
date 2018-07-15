@@ -1,14 +1,17 @@
 "" vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'kylef/apiblueprint.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ajh17/vimcompletesme'
+Plug 'rhysd/vim-clang-format'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'cohama/lexima.vim'
 
 call plug#end()
 
@@ -23,8 +26,8 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set backspace=2
-set autoindent
-set smarttab
+"set autoindent
+"set smarttab
 
 "" Make search not suck
 set nohlsearch
@@ -39,7 +42,7 @@ highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGre
 "" GUI
 if has("gui_running")
   if has('win32') || has('win64')
-    set guifont=Consolas:h11
+    set guifont=Hack:h11
     set linespace=0
   else
     set guifont=Roboto\ Mono:h12
@@ -58,23 +61,22 @@ set guioptions-=T
 "" Set the working directory to be that of the current file.
 autocmd BufEnter * lcd %:p:h
 
-"" vim-airline
+"" Status line
 set laststatus=2
 set noshowmode
-set statusline+=%{fugitive#statusline()}
-let g:airline_theme = 'bubblegum'
+let g:lightline = {
+  \  'colorscheme': 'wombat',
+  \  'active': {
+  \    'left': [ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \  },
+  \  'component_function': {
+  \    'gitbranch': 'fugitive#head'
+  \  }
+  \}
 
 "" Make ctrlp ignore files listed in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-"" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 "" apiblueprint only wants to work with 4 spaces :(
 autocmd Filetype apiblueprint setlocal ts=4 sts=4 sw=4
@@ -89,6 +91,9 @@ nnoremap <silent> <C-h> :bprevious<CR>
 
 "" ctrl-e to swap back and forth between previous buffers
 nnoremap <C-e> <C-^>
+
+"" ctrl-k to invoke clang-format
+nnoremap <C-k> :ClangFormat<CR>
 
 "" Save a buffer before hiding it.
 set autowrite
@@ -140,4 +145,16 @@ function! CloseQuickfix()
   endif
 endfunction
 au BufEnter * call CloseQuickfix()
+
+"" Dart stuff.
+let dart_style_guide = 2
+let dart_format_on_save = 1
+
+"" NERDTree
+"" Close vim if only window left open is NERDTree.
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"" Hide the help message.
+let NERDTreeMinimalUI = 1
+"" Ctrl+n to open/close NERDTree.
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
