@@ -100,3 +100,6 @@ fi
 
 # added by travis gem
 #[ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
+
+export PATH=$PATH:/opt/flutter/bin
+
