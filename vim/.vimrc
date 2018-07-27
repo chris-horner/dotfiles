@@ -34,20 +34,20 @@ set nohlsearch
 set ignorecase
 set smartcase
 
+"" Let's try not having line numbers for a while.
 "" Make line numbers more useful/colourful
-set number
-set relativenumber
-highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+"set number
+"set relativenumber
+"highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 "" GUI
 if has("gui_running")
-  if has('win32') || has('win64')
-    set guifont=Hack:h11
-    set linespace=0
-  else
+  if has('gui_macvim')
     set guifont=Roboto\ Mono:h12
-    set linespace=1
+  else
+    set guifont=Hack:h11
   endif
+  set linespace=1
   colorscheme monokai-gui
   "" Stop annoying sounds when pressing escape too many times.
   autocmd GUIEnter * set vb t_vb=
@@ -155,6 +155,8 @@ let dart_format_on_save = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "" Hide the help message.
 let NERDTreeMinimalUI = 1
+"" Stop trying to open non text files.
+let NERDTreeIgnore += ['\.DAT$', '\.LOG1$', '\.LOG1$', '\.png$','\.jpg$','\.gif$','\.mp3$','\.flac$', '\.ogg$', '\.mp4$','\.avi$','.webm$','.mkv$','\.pdf$', '\.zip$', '\.tar.gz$', '\.rar$']
 "" Ctrl+n to open/close NERDTree.
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
