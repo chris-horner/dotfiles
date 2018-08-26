@@ -157,10 +157,6 @@ let dart_format_on_save = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "" Hide the help message.
 let NERDTreeMinimalUI = 1
-"" Stop trying to open non text files on Windows.
-if has('win32') || has('win64')
-  let NERDTreeIgnore += ['\.DAT$', '\.LOG1$', '\.LOG1$', '\.png$','\.jpg$','\.gif$','\.mp3$','\.flac$', '\.ogg$', '\.mp4$','\.avi$','.webm$','.mkv$','\.pdf$', '\.zip$', '\.tar.gz$', '\.rar$']
-endif
 "" Ctrl+n to open/close NERDTree.
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
