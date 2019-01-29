@@ -43,7 +43,7 @@ set smartcase
 "" GUI
 if has("gui_running")
   if has('gui_macvim')
-    set guifont=Roboto\ Mono:h12
+    set guifont=Hack\ Regular:h15
   elseif has('gui_gtk2') || has('gui_gtk3')
     set guifont=Hack\ 11
   else
