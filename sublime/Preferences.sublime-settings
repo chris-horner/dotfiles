@@ -1,0 +1,33 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"drag_text": false,
+	"ensure_newline_at_eof_on_save": true,
+	"fold_buttons": false,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"build",
+		"public"
+	],
+	"font_face": "Hack",
+	"font_size": 12,
+	"highlight_line": true,
+	"highlight_modified_tabs": false,
+	"ignored_packages":
+	[
+	],
+	"line_numbers": false,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"margin": -12,
+	"mini_diff": "auto",
+	"save_on_focus_lost": true,
+	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"vintage_start_in_command_mode": true
+}

@@ -1,2 +1,6 @@
 # Plugins shouldn't be checked in.
 vim/.vim/plugged
+
+sublime/*
+!sublime/*.sublime-settings
+!sublime/*.sublime-keymap
