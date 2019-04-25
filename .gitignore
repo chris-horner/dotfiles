@@ -1,6 +1,12 @@
+.DS_Store
+
 # Plugins shouldn't be checked in.
 vim/.vim/plugged
 
-sublime/*
-!sublime/*.sublime-settings
-!sublime/*.sublime-keymap
+# Only track relevant Sublime files.
+sublime/User/*
+sublime/Default/*
+!sublime/User/*.sublime-settings
+!sublime/User/*.sublime-keymap
+!sublime/Default/*.sublime-settings
+!sublime/Default/*.sublime-keymap

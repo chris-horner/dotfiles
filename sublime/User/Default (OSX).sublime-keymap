@@ -1,0 +1,5 @@
+[
+  { "keys": ["alt+b"], "command": "toggle_side_bar" },
+  { "keys": ["alt+shift+b"], "command": "reveal_in_side_bar" },
+  { "keys": ["super+alt+l"], "command": "reindent" }
+]
