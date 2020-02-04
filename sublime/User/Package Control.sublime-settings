@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Kotlin",
 		"Package Control",
 		"Zen Tabs"
 	]
