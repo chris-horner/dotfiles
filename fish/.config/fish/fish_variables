@@ -4,6 +4,7 @@ SETUVAR --export --path PATH:/Users/chris/Library/Android/sdk/platform\x2dtools/
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:F63F86\x1e\x2d\x2dbold
@@ -15,6 +16,7 @@ SETUVAR fish_color_error:ff0000
 SETUVAR fish_color_escape:CC7832
 SETUVAR fish_color_history_current:normal
 SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:normal
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:FD9721
