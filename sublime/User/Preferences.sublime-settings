@@ -14,7 +14,8 @@
 		"build",
 		"public"
 	],
-	"font_face": "Hack",
+	"font_face": "JetBrains Mono",
+	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
