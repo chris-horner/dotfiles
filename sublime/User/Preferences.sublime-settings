@@ -15,7 +15,7 @@
 		"public"
 	],
 	"font_face": "JetBrains Mono",
-	"font_size": 12,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
