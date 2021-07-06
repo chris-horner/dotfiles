@@ -5,8 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"ElixirSyntax",
 		"Kotlin",
 		"Package Control",
-		"Zen Tabs"
-	]
+		"Protobuf Syntax Hightlighting",
+		"Zen Tabs",
+	],
 }

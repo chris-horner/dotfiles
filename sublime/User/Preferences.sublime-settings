@@ -15,7 +15,7 @@
 		"public"
 	],
 	"font_face": "JetBrains Mono",
-	"font_size": 14,
+	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
@@ -34,5 +34,5 @@
 	"tab_size": 2,
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
 }
