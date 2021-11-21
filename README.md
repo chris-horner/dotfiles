@@ -19,7 +19,7 @@ Sublime's a trickier one to synchronise. Symlinks need to be created to the appr
 #### Windows
 The easiest way to achieve this on Windows is using a [Junction](https://en.wikipedia.org/wiki/NTFS_junction_point).
 ```batch
-mklink /J "%APPDATA%\Sublime Text 3\Packages" "%USERDATA%\dotfiles\sublime"
+mklink /J "%APPDATA%\Sublime Text\Packages" "%HOMEPATH%\dotfiles\sublime"
 ```
 
 #### Linux
