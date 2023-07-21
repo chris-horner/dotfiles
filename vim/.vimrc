@@ -25,7 +25,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set backspace=2
+set backspace=indent,eol,start
 "set autoindent
 "set smarttab
 
@@ -160,3 +160,5 @@ let NERDTreeMinimalUI = 1
 "" Ctrl+n to open/close NERDTree.
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
+"" Git commits
+autocmd Filetype gitcommit set tw=0
