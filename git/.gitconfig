@@ -11,12 +11,17 @@
 	default = simple
 [core]
 	autocrlf = input
-  editor = vim
+	editor = subl --launch-or-new-window -w
 	trustctime = false
 [merge]
-  tool = vimdiff
+  tool = smerge
 [mergetool]
   keeptemoraries = false
   keepbackups = false
   prompt = false
   trustexitcode = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
