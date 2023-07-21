@@ -1,6 +1,6 @@
 {
 	"always_show_minimap_viewport": true,
-	"color_scheme": "auto",
+	"color_scheme": "Monokai Pro.sublime-color-scheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"drag_text": false,
 	"ensure_newline_at_eof_on_save": true,
@@ -11,11 +11,10 @@
 		".git",
 		".hg",
 		"CVS",
-		"build",
 		"public"
 	],
 	"font_face": "JetBrains Mono",
-	"font_size": 15,
+	"font_size": 19,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
@@ -32,7 +31,7 @@
 	],
 	"save_on_focus_lost": true,
 	"tab_size": 2,
-	"theme": "auto",
+	"theme": "Monokai Pro.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"vintage_start_in_command_mode": true,
 	"dark_color_scheme": "Monokai.sublime-color-scheme",
