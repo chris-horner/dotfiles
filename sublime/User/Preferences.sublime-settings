@@ -31,11 +31,12 @@
 	],
 	"save_on_focus_lost": true,
 	"tab_size": 2,
-	"theme": "Monokai Pro.sublime-theme",
+	"theme": "auto",
 	"translate_tabs_to_spaces": true,
 	"vintage_start_in_command_mode": true,
 	"dark_color_scheme": "Monokai.sublime-color-scheme",
 	"light_color_scheme": "Breakers.sublime-color-scheme",
 	"dark_theme": "Adaptive.sublime-theme",
 	"light_theme": "Adaptive.sublime-theme",
+	"index_files": true,
 }
