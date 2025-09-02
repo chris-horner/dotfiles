@@ -11,4 +11,3 @@ alias gw "./gradlew"
 alias gitBranches "git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias killd 'jps | grep Daemon | cut -d'\'' '\'' -f1 | xargs kill -9'
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-git machete completion fish | source
