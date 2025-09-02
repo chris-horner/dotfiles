@@ -1,5 +1,6 @@
 if test (uname -s) = "Darwin"
   set -gx PATH ~/Library/Android/sdk/platform-tools/ $PATH
+  set -gx PATH ~/bin/ $PATH
   set -x JAVA_HOME (/usr/libexec/java_home -v 17)
   set -x ANDROID_SDK_ROOT ~/Library/Android/sdk
   set -x ANDROID_SDK ~/Library/Android/sdk
