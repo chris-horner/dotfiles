@@ -10,3 +10,4 @@ sublime/Default/*
 !sublime/User/*.sublime-keymap
 !sublime/Default/*.sublime-settings
 !sublime/Default/*.sublime-keymap
+sublime/pathlib/*
