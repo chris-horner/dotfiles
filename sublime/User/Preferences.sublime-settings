@@ -1,5 +1,4 @@
 {
-	"always_show_minimap_viewport": true,
 	"color_scheme": "Monokai Pro.sublime-color-scheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"drag_text": false,
@@ -31,13 +30,11 @@
 	],
 	"save_on_focus_lost": true,
 	"tab_size": 2,
-	"theme": "amCoder.sublime-theme",
-	"translate_tabs_to_spaces": true,
+	"theme": "Adaptive.sublime-theme",
 	"vintage_start_in_command_mode": true,
 	"dark_color_scheme": "Mariana.sublime-color-scheme",
 	"light_color_scheme": "Breakers.sublime-color-scheme",
-	"dark_theme": "Default Dark.sublime-theme",
-	"light_theme": "Default.sublime-theme",
+	"dark_theme": "amCoder.sublime-theme",
+	"light_theme": "Spacegray Light.sublime-theme",
 	"index_files": true,
-	"auto_hide_menu": true,
 }

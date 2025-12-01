@@ -4,10 +4,8 @@
 vim/.vim/plugged
 
 # Only track relevant Sublime files.
-sublime/User/*
-sublime/Default/*
+sublime/*
 !sublime/User/*.sublime-settings
 !sublime/User/*.sublime-keymap
 !sublime/Default/*.sublime-settings
 !sublime/Default/*.sublime-keymap
-sublime/pathlib/*
