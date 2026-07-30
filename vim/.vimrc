@@ -61,7 +61,9 @@ set guioptions-=r
 set guioptions-=T
 
 "" Set the working directory to be that of the current file.
-autocmd BufEnter * lcd %:p:h
+if !has('ide')
+  autocmd BufEnter * lcd %:p:h
+endif
 
 "" Status line
 set laststatus=2
@@ -146,7 +148,9 @@ function! CloseQuickfix()
     endif
   endif
 endfunction
-au BufEnter * call CloseQuickfix()
+if !has('ide')
+  au BufEnter * call CloseQuickfix()
+endif
 
 "" Dart stuff.
 let dart_style_guide = 2
@@ -154,7 +158,9 @@ let dart_format_on_save = 1
 
 "" NERDTree
 "" Close vim if only window left open is NERDTree.
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+if !has('ide')
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+endif
 "" Hide the help message.
 let NERDTreeMinimalUI = 1
 "" Ctrl+n to open/close NERDTree.
